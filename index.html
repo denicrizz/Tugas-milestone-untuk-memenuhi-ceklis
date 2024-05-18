@@ -3,172 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superstore Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Add any CSS links or stylesheets here -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-image: url('bg.jpg'); /* Replace with your background image */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        nav {
+            background-color: #2c3e50;
+            overflow: hidden;
+        }
+        nav a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .team-member {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.2s;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .team-member h3 {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+            color: #2c3e50;
+        }
+        .team-member p {
+            margin: 5px 0;
+            color: #7f8c8d;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <a href="login.html">Login</a>
+    </nav>
     <header>
-        <h1>Welcome to Superstore Dashboard</h1>
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="dash.html">Home</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <h1>Data Analytics Superstore - Team 13</h1>
     </header>
-
-    <main>
-        <!-- Main content area -->
-        <section id="main-content">
-            <!-- Analytics Section -->
-            <article id="analytics-section">
-                <!-- Placeholder for analytics content -->
-                <canvas id="myChart" style="width:100%;max-width:500px"></canvas>
-                <script>
-                    var xValues = ["Technology", "Office Supplies", "Furniture"];
-                    var yValues = [37.5, 28.5, 33.9];
-                    var barColors = [
-                      "#b91d47",
-                      "#00aba9",
-                      "#2b5797",
-                      "#e8c3b9",
-                      "#1e7145"
-                    ];
-                    
-                    new Chart("myChart", {
-                      type: "pie",
-                      data: {
-                        labels: xValues,
-                        datasets: [{
-                          backgroundColor: barColors,
-                          data: yValues
-                        }]
-                      },
-                      options: {
-                        title: {
-                          display: true,
-                          text: "Discount Rate / Category (%)"
-                        }
-                      }
-                    });
-                    </script>     
-            </article>
-            
-            <!-- Notifications Section -->
-            <article id="notifications-section">
-                <canvas id="barChart" style="width:100%;max-width:500px"></canvas>
-
-                <script>
-                var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-                var yValues = [55, 49, 44, 24, 15];
-                var barColors = ["red", "green","blue","orange","brown"];
-
-                new Chart("barChart", {
-                type: "bar",
-                data: {
-                labels: xValues,
-                datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-                }]
-                },
-                options: {
-                legend: {display: false},
-                title: {
-                display: true,
-                text: "Sales & Profit By Category"
-                   }
-                     }
-                    });
-                    </script>
-                    </article>
-
-            <!-- Tasks Section -->
-            <article id="tasks-section">
-
-                <canvas id="doughnutChart" style="width:100%;max-width:500px"></canvas>
-                <script>
-                    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-                    var yValues = [55, 49, 44, 24, 15];
-                    var barColors = [
-                      "#b91d47",
-                      "#00aba9",
-                      "#2b5797",
-                      "#e8c3b9",
-                      "#1e7145"
-                    ];
-                    
-                    new Chart("doughnutChart", {
-                      type: "doughnut",
-                      data: {
-                        labels: xValues,
-                        datasets: [{
-                          backgroundColor: barColors,
-                          data: yValues
-                        }]
-                      },
-                      options: {
-                        title: {
-                          display: true,
-                          text: "Profit by Region (%)"
-                        }
-                      }
-                    });
-                    </script>
-
-            </article>
-            
-            <!-- Calendar Section -->
-            <article id="calendar-section">
-                <h2>Calendar</h2>
-                <!-- Placeholder for calendar content -->
-                <p>This section will display the calendar.</p>
-            </article>
-        </section>
-
-        <!-- Sidebar for additional content -->
-        <aside>
-            <h2>Additional Information</h2>
-            <!-- Placeholder for additional content -->
-            <p>This sidebar will display additional information or links.</p>
-        </aside>
-
-        <!-- Form for user interactions -->
-        <section id="user-interactions">
-            <h2>User Interactions</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="department">Department:</label>
-                <select id="department" name="department">
-                    <option value="sales">Sales</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="finance">Finance</option>
-                    <option value="hr">Human Resources</option>
-                </select><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </form>
-        </section>
-    </main>
-
+    <div class="content">
+        <h2>About Superstore</h2>
+        <p>Welcome to Superstore, an innovative marketplace designed and developed by Team 13. Our superstore offers a wide range of products to meet all your needs. We aim to provide the best shopping experience with a focus on quality, customer service, and uniqueness.</p>
+        <h2>Meet the Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="shopping_cart.png" alt="Member 1">
+                <h3>Member 1</h3>
+                <p>Role 1</p>
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Member 2">
+                <h3>Member 2</h3>
+                <p>Role 2</p>
+            </div>
+            <div class="team-member">
+                <img src="member3.jpg" alt="Member 3">
+                <h3>Member 3</h3>
+                <p>Role 3</p>
+            </div>
+            <div class="team-member">
+                <img src="member4.jpg" alt="Member 4">
+                <h3>Member 4</h3>
+                <p>Role 4</p>
+            </div>
+            <div class="team-member">
+                <img src="member5.jpg" alt="Member 5">
+                <h3>Member 5</h3>
+                <p>Role 5</p>
+            </div>
+            <div class="team-member">
+                <img src="member6.jpg" alt="Member 6">
+                <h3>Member 6</h3>
+                <p>Role 6</p>
+            </div>
+            <div class="team-member">
+                <img src="member7.jpg" alt="Member 7">
+                <h3>Member 7</h3>
+                <p>Role 7</p>
+            </div>
+            <div class="team-member">
+                <img src="member8.jpg" alt="Member 8">
+                <h3>Member 8</h3>
+                <p>Role 8</p>
+            </div>
+            <div class="team-member">
+                <img src="member9.jpg" alt="Member 9">
+                <h3>Member 9</h3>
+                <p>Role 9</p>
+            </div>
+            <div class="team-member">
+                <img src="member10.jpg" alt="Member 10">
+                <h3>Member 10</h3>
+                <p>Role 10</p>
+            </div>
+        </div>
+    </div>
     <footer>
-        <!-- Footer content -->
-        <p>&copy; 2024 Superstore Dashboard By Team 13 - Balikpapan. All rights reserved.</p>
+        &copy; 2024 Superstore Balikpapan- Team 13
     </footer>
-        
 </body>
 </html>

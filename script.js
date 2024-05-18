@@ -69,7 +69,7 @@ if(loginForm) {
 
         if (user) {
             alert("Login successful!");
-            window.location.href = "index.html";
+            window.location.href = "dash.html";
         } else {
             errorMessageElement.innerText = "Invalid email or password";
             errorMessageElement.style.display = 'block';
