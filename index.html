@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Tahoma', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
@@ -48,7 +48,25 @@
             justify-content: center;
             margin: 20px;
         }
+        .mentors-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+       
         .team-member {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.2s;
+        }
+        .mentors-member {
             background-color: white;
             border: 1px solid #ddd;
             border-radius: 10px;
@@ -62,7 +80,15 @@
         .team-member:hover {
             transform: scale(1.05);
         }
+        .mentors-member:hover {
+            transform: scale(1.05);
+        }
         .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .mentors-member img {
             border-radius: 50%;
             width: 100px;
             height: 100px;
@@ -72,14 +98,32 @@
             margin: 10px 0 5px;
             color: #2c3e50;
         }
+        .mentors-member h3 {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+            color: #2c3e50;
+        }
         .team-member p {
+            margin: 5px 0;
+            color: #7f8c8d;
+        }
+        .mentors-member p {
             margin: 5px 0;
             color: #7f8c8d;
         }
         .team-member .social-icons {
             margin-top: 10px;
         }
+        .mentors-member .social-icons {
+            margin-top: 10px;
+        }
         .team-member .social-icons a {
+            color: #0e76a8; /* LinkedIn color */
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .mentors-member .social-icons a {
             color: #0e76a8; /* LinkedIn color */
             margin: 0 5px;
             text-decoration: none;
@@ -106,7 +150,30 @@
     <div class="content">
         <h2>About Superstore</h2>
         <p>Welcome to Superstore, an innovative marketplace designed and developed by Team 13. Our superstore offers a wide range of products to meet all your needs. We aim to provide the best shopping experience with a focus on quality, customer service, and uniqueness.</p>
-        <h2>Meet the Team</h2>
+        <h2>Mentors</h2>
+        <div class="mentors-container">
+        <div class = "mentors-member">
+            <img src="kak_lingga.jpg" alt="Mentors 1">
+            <h3>Almanik Balingga</h3>
+            <p>Mentor Data Analytics</p> 
+            <div class="social-icons"></div>
+            <a href="https://www.linkedin.com/in/juliaressiiy-b27a46275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        </div>
+        <div class="mentors-container">
+            <div class = "mentors-member">
+                <img src="kak_faris.jpg" alt="Mentors 2">
+                <h3>Fariz Rizky Rizaldy</h3>
+                <p>Mentor Software Engineering</p>
+                <div class="social-icons"></div>
+            <a href="https://www.linkedin.com/in/juliaressiiy-b27a46275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            </div>
+            </div>
+        <h2>Meet Our Team</h2>
         <div class="team-container">
             <div class="team-member">
                 <img src="julia.jpg" alt="Member 1">
