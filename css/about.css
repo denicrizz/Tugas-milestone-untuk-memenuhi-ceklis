@@ -6,7 +6,7 @@ body {
     color: #333;
 }
 header {
-    background-image: url('bg.jpg'); /* Replace with your background image */
+    background-image: url('../img/bg.jpg');
     background-size: cover;
     color: white;
     text-align: center;
