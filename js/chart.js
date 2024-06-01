@@ -213,3 +213,48 @@ var myChart6 = new Chart(ctx6, {
     data: data6,
     options: options6
 });
+
+// Chart 7
+var data = {
+    labels: ["2000", "4000", "6000", "8000"],
+    datasets: [{
+      label: "Technology",
+      borderColor: "#5CB3FF",
+      backgroundColor: "#5CB3FF",
+      data: [{x: 1.847, y: 145.454}],
+    }, {
+      label: "Furniture",
+      borderColor: "#79BAEC",
+      backgroundColor: "#79BAEC",
+      data: [{x: 2.121, y: 18.451}],
+    }, {
+
+      label: "Office Supplies",
+      borderColor: "#82CAFF",
+      backgroundColor: "#82CAFF",
+      data: [{x: 6.026, y: 122.490}],
+    }]
+  };
+
+  
+  var options = {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Relationship Between Discount on Profit By Category'
+    },
+    scales: {
+      XAxes: [{
+        type: 'linear',
+        position: 'bottom'
+      }]
+    }
+  };
+
+  
+  var ctx7 = document.getElementById('myChart7').getContext('2d');
+  var myChart = new Chart(ctx7, {
+    type: 'scatter',
+    data: data,
+    options: options
+  });
