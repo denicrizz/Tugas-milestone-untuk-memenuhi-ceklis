@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/dash-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="js/chart.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -80,7 +81,52 @@
             </div>
         </div>
     </div>
-
+    <div class="container my-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Filter Data</h5>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="yearFilter">Filter by Year:</label>
+                  <select class="form-control" id="yearFilter">
+                    <option value="">All Years</option>
+                    <!-- Tambahkan opsi tahun lainnya -->
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <!-- ... -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="categoryFilter">Filter by Category:</label>
+                  <select class="form-control" id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <!-- Tambahkan opsi kategori lainnya -->
+                    <option value="Technology">Technology</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Office Supplies">Office Supplies</option>
+                    <!-- ... -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Chart</h5>
+              </div>
+              <div class="card-body">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <canvas id="myChart"></canvas>
     <!-- Dashboard -->
     <ul class="charts">
         <div class="chart" id="linechart">
